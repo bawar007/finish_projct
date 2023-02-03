@@ -1,12 +1,14 @@
 import React from "react";
 
+import Header from "./components/Header/Header";
+
 import StoreProvider from "./store/StoreProvider";
 
 import "./styles/App.scss";
 
 const App = () => (
   <StoreProvider>
-    <header>Hello Word</header>
+    <Header />
   </StoreProvider>
 );
 
