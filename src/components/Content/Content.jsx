@@ -8,6 +8,7 @@ import { default as ContentStyles } from "./Content.module.scss";
 
 import Courses from "../Courses/Courses";
 import UserCourses from "../UserCourses/UserCourses";
+import AdminPanel from "../AdminPanel/AdminPanel";
 
 const style = bemCssModules(ContentStyles);
 
@@ -24,9 +25,7 @@ const Content = () => {
       <Routes>
         <Route path="/" element={<Courses />} />
         {isUserLogged && <Route path="/my-courses" element={<UserCourses />} />}
-        {isAdmin && (
-          <Route path="/manage-courses" element={<p>Zarządzanie kursami</p>} />
-        )}
+        {isAdmin && <Route path="/manage-courses" element={<AdminPanel />} />}
       </Routes>
     </main>
   );
